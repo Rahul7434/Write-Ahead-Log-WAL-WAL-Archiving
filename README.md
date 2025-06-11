@@ -11,6 +11,7 @@ Ensures that no data is lost during crashes or failures, if the database crashes
 		timelineId + (LSN - 1)
 		-000000010000000000000001 to 0000000100000000000000FF
     ```
+- If WAL segments grow beyond max_wal_size, PostgreSQL initiates a forced checkpoint to clean up WAL files. and its default size is 1GB.
 -------------------------------------------------------------------------------------------------------------------------------
 -  Provide various configuration parameters to manage.
 
